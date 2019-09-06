@@ -32,7 +32,7 @@ export default {
     login() {
       var _this = this
       this.$axios
-        .post('./login', {
+        .post('/login', {
           username: this.loginForm.username,
           password: this.loginForm.password
         }).then(successRes => {

@@ -9,10 +9,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
 public class LibraryController {
     @Autowired
     BookService bookService;
+
 
     @GetMapping("/books")
     public List<Book> list() throws Exception {
