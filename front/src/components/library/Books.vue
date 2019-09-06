@@ -89,7 +89,7 @@
                 type: 'warning'
             }).then(() => {
                 this.$axios
-                    .post('/delete', {id: id})
+                    .delete(`/delete/${id}`)
                     .then(res => {
                         if(res && res.status === 200) {
                             this.loadBooks()

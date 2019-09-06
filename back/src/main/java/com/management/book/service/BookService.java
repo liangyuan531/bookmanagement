@@ -35,4 +35,8 @@ public class BookService {
 //        Sort sort = new Sort(Sort.Direction.DESC, "id");
         return bookDao.findAllByCategory(category);
     }
+
+    public List<Book> search(String keywords) {
+        return bookDao.findAllByTitleLikeOrAuthorLike('%'+keywords+'%', '%'+keywords+'%');
+    }
 }

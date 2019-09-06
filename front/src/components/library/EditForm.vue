@@ -79,7 +79,7 @@ export default {
             }
         },
         onSubmit() {
-            this.$axios.post('/books', {
+            this.$axios.post('/book', {
                 id: this.form.id,
                 cover: this.form.cover,
                 title: this.form.title,

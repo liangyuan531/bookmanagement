@@ -20,7 +20,7 @@ export default {
         listByCategory() {
             var _this = this
             var cid = this.$refs.sideMenu.cid
-            var url = `category/${cid}/books`
+            var url = `/categories/${cid}/books`
             _this.$axios.get(url)
                 .then(res => {
                     if(res && res.status === 200) {
